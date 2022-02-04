@@ -217,7 +217,7 @@
             <div class="projects__row-content">
               <h3 class="projects__row-content-title">WiP - Digitization of Lunch Systems through RFID</h3>
               <p class="projects__row-content-desc">
-                My school uses paper tickets as a way of providing lunch to students. How outdated!<br> With this project, I propose a better, newer, and open-source system to replace this outdated form of technology!
+                My school uses paper tickets as a way of providing lunch to students. How outdated! With this project, I propose a better, newer, and open-source system to replace this outdated form of technology!
               </p>
               <a
                 href="./lunchsystem.html"
@@ -252,6 +252,27 @@
           <div class="projects__row">
             <div class="projects__row-img-cont">
               <img
+                src="https://www.managebac.com/wp-content/uploads/2021/12/MB-logo@2x.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">WiP - Managebac Python Wrapper</h3>
+              <p class="projects__row-content-desc" name="Managebac">
+              </p>
+              <a
+                href="https://github.com/rhijjawi"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >View Now!</a
+              >
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
                 src="./assets/jpeg/project-mockup-example.jpeg"
                 alt="Software Screenshot"
                 class="projects__row-img"
@@ -261,7 +282,7 @@
             <div class="projects__row-content">
               <h3 class="projects__row-content-title">More Projects</h3>
               <p class="projects__row-content-desc">
-                You'll find a lot of my porjects and project forks on my GitHub account! I'm very active and enjoy configuring and contributing to open-source apps.
+                You'll find a lot of my projects and project forks on my GitHub account! I'm very active and enjoy configuring and contributing to open-source apps.
               </p>
               <a
                 href="https://github.com/rhijjawi"
@@ -385,12 +406,17 @@
     <script>
       async function NextDNS(){
         console.log("COOL")
-        let r = await axios({
+        let n = await axios({
         method: 'get',
         url: ' https://api.github.com/repos/rhijjawi/NextDNS-API',
       });
-      document.getElementsByName("NextDNS-API")[0].innerHTML = r.data.description
-    }  
+      let m = await axios({
+        method: 'get',
+        url: ' https://api.github.com/repos/rhijjawi/ManageBac-API',
+      });
+      document.getElementsByName("NextDNS-API")[0].innerHTML = n.data.description
+      document.getElementsByName("Managebac")[0].innerHTML = m.data.description
+    } 
     </script>
     <script>NextDNS()</script>
   </body>
