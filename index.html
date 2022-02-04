@@ -237,15 +237,15 @@
               />
             </div>
             <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Project 2</h3>
-              <p class="projects__row-content-desc">
+              <h3 class="projects__row-content-title">NextDNS API Python Wrapper</h3>
+              <p class="projects__row-content-desc" name="NextDNS-API">
                 
               </p>
               <a
-                href="./project-2.html"
+                href="./nextdns.html"
                 class="btn btn--med btn--theme dynamicBgClr"
                 target="_blank"
-                >Case Study</a
+                >View Now!</a
               >
             </div>
           </div>
@@ -381,5 +381,17 @@
     </footer>
 
     <script src="./index.js"></script>
+    
+    <script>
+      async function NextDNS(){
+        console.log("COOL")
+        let r = await axios({
+        method: 'get',
+        url: ' https://api.github.com/repos/rhijjawi/NextDNS-API',
+      });
+      document.getElementsByName("NextDNS-API")[0].innerHTML = r.data.description
+    }  
+    </script>
+    <script>NextDNS()</script>
   </body>
 </html>
