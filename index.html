@@ -230,6 +230,27 @@
               />
             </div>
             <div class="projects__row-content">
+              <h3 class="projects__row-content-title">WiP - Torrent as a Service (Coming soon!)</h3>
+              <p class="projects__row-content-desc" name="TaaS">
+              </p>
+              <a
+                href="https://github.com/rhijjawi"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >View Now!</a
+              >
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="https://www.managebac.com/wp-content/uploads/2021/12/MB-logo@2x.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
               <h3 class="projects__row-content-title">WiP - Managebac Python Wrapper</h3>
               <p class="projects__row-content-desc" name="Managebac">
               </p>
@@ -275,7 +296,7 @@
           </span>
         </h2>
         <div class="contact__form-container">
-          <form action="#" class="contact__form" netlify>
+          <form name="contact" action="#" class="contact__form" netlify>
             <div class="contact__form-field">
               <label class="contact__form-label" for="name">Name</label>
               <input
@@ -378,7 +399,6 @@
     
     <script>
       async function NextDNS(){
-        console.log("COOL")
         let n = await axios({
         method: 'get',
         url: ' https://api.github.com/repos/rhijjawi/NextDNS-API',
@@ -387,9 +407,14 @@
         method: 'get',
         url: ' https://api.github.com/repos/rhijjawi/ManageBac-API',
       });
+      let t = await axios({
+        method: 'get',
+        url: ' https://api.github.com/repos/rhijjawi/ManageBac-API',
+      });
       document.getElementsByName("NextDNS-API")[0].innerHTML = n.data.description
       document.getElementsByName("Managebac")[0].innerHTML = m.data.description
-    } 
+      document.getElementsByName("TaaS")[0].innerHTML = t.data.description
+      } 
     </script>
     <script>NextDNS()</script>
     
