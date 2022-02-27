@@ -408,13 +408,13 @@
         method: 'get',
         url: ' https://api.github.com/repos/rhijjawi/ManageBac-API',
       });
-      let t = await axios({
-        method: 'get',
-        url: ' https://api.github.com/repos/rhijjawi/ManageBac-API',
-      });
+      //let t = await axios({
+        //method: 'get',
+        //url: ' https://api.github.com/repos/rhijjawi/ManageBac-API',
+      //});
       document.getElementsByName("NextDNS-API")[0].innerHTML = n.data.description
       document.getElementsByName("Managebac")[0].innerHTML = m.data.description
-      document.getElementsByName("TaaS")[0].innerHTML = t.data.description
+      //document.getElementsByName("TaaS")[0].innerHTML = t.data.description
       } 
     </script>
     <script>NextDNS()</script>
