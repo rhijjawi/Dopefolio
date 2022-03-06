@@ -10,5 +10,7 @@ function random_colors(choices) {
   var index = Math.floor(Math.random() * nocolors);
   return choices[index];
 }
-c = random_colors(colors)
-document.getElementsByClassName('home-hero')[0].style.setProperty('background', `linear-gradient(to right, ${c[0]}, ${c[1]}), url(../../assets/svg/common-bg.svg)`)
+c = random_colors(colors);
+document.addEventListener("DOMContentLoaded", function(event) {
+    document.getElementsByClassName('home-hero')[0].style.setProperty('background', `linear-gradient(to right, ${c[0]}, ${c[1]}), url(../../assets/svg/common-bg.svg)`)
+});
