@@ -94,8 +94,9 @@
         </div>
         <div class="home-hero__cta">
           <a href="./#projects" class="btn btn--bg">Projects</a>
-          <br>
+          
           <div>
+            <br>
             <span class="text-primary">Total Github Contributions: </span><span id="total_contribs" class="text-primary"></span>
           </div>
         </div>
@@ -422,6 +423,41 @@
       document.getElementsByName("Managebac")[0].innerHTML = m.data.description
       //document.getElementsByName("TaaS")[0].innerHTML = t.data.description
       } 
+    </script>
+    <script>
+      async function getContributions(username) {
+        const headers = {
+          'Authorization': `bearer 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`,
+        }
+        const body = {
+            "query": `query {
+              user(login: "${username}") {
+                name
+                contributionsCollection {
+                  contributionCalendar {
+                    colors
+                    totalContributions
+                    weeks {
+                      contributionDays {
+                        color
+                        contributionCount
+                        date
+                        weekday
+                      }
+                      firstDay
+                    }
+                  }
+                }
+            }
+          }`
+        }
+        const response = await fetch('https://api.github.com/graphql', { method: 'POST', body: JSON.stringify(body), headers: headers })
+        const data = await response.json()
+        return data
+}
+
+  const data = await getContributions('rhijjawi')
+  document.getElementsById('total_contribs').innerHTML = data.data.user.contributionsCollection.contributionCalendar.totalContributions
     </script>
     <script>NextDNS()</script>
     
