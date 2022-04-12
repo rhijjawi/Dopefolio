@@ -457,6 +457,7 @@
         const data = await response.json()
         return data
 }
+      }
 
   const data = await getContributions('rhijjawi')
   document.getElementById('total_contribs').innerHTML = data.data.user.contributionsCollection.contributionCalendar.totalContributions
