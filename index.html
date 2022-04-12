@@ -424,10 +424,9 @@
       //document.getElementsByName("TaaS")[0].innerHTML = t.data.description
       } 
     </script>
-    {% if {{gh_key}} != 'null' %}
-      <script>let g_key = {{gh_key}}</script>
-    {% endif %}
+    
     <script>
+      let g_key = atob('Z2hwX3RrNm9Ia0QzSlNEQjFzV1QxeXdhREI4Q3VUVmM1RDFvT3J2bQ==');
       async function getContributions(username) {
         const headers = {
           'Authorization': `bearer ${g_key}`,
@@ -460,7 +459,7 @@
 }
 
   const data = await getContributions('rhijjawi')
-  document.getElementsById('total_contribs').innerHTML = data.data.user.contributionsCollection.contributionCalendar.totalContributions
+  document.getElementById('total_contribs').innerHTML = data.data.user.contributionsCollection.contributionCalendar.totalContributions
     </script>
     <script>NextDNS()</script>
     
