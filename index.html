@@ -424,10 +424,13 @@
       //document.getElementsByName("TaaS")[0].innerHTML = t.data.description
       } 
     </script>
+    {% if {{gh_key}} != 'null' %}
+      <script>let g_key = {{gh_key}}</script>
+    {% endif %}
     <script>
       async function getContributions(username) {
         const headers = {
-          'Authorization': `bearer {{gh_key}}`,
+          'Authorization': `bearer ${g_key}`,
         }
         const body = {
             "query": `query {
