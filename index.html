@@ -455,13 +455,13 @@
         }
         const response = await fetch('https://api.github.com/graphql', { method: 'POST', body: JSON.stringify(body), headers: headers })
         const data = await response.json()
+        document.getElementById('total_contribs').innerHTML = data.data.user.contributionsCollection.contributionCalendar.totalContributions
         return data
 }
     </script>
     <script>NextDNS()</script>
     <script>
-      const data = await getContributions('rhijjawi')
-      document.getElementById('total_contribs').innerHTML = data.data.user.contributionsCollection.contributionCalendar.totalContributions
+      getContributions('rhijjawi')
     </script>
     
   </body>
