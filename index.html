@@ -11,15 +11,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.25.0/axios.min.js" integrity="sha512-/Q6t3CASm04EliI1QyIDAA/nDo9R8FQ/BULoUFyN4n/BDdyIxeH7u++Z+eobdmr11gG5D/6nPFyDlnisDwhpYA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
-    <script async defer data-website-id="6c819c39-c72c-431f-b56a-87957a548ff2" src="https://umami-production-5cc2.up.railway.app/umami.js"></script>
     <script src="./assets/js/randombg.js"></script>
     <script defer data-domain="ramzihijjawi.me" src="https://plausible.io/js/plausible.js"></script>
   </head>
   <body>
+    
     <header class="header">
       <div class="header__content">
         <div class="header__logo-container">
@@ -99,8 +100,8 @@
           </p>
         </div>
         <div class="home-hero__cta">
-          <a href="./#projects" class="btn btn--bg">Projects</a>
-          
+          <a href="#projects" class="btn btn--bg">Projects</a><br><br>
+          <a href="#freelancing" class="btn btn--bg">For Hire</a>
           <div>
             <br>
             <span class="text-primary">Total Github Contributions: </span><span id="total_contribs" class="text-primary"></span>
@@ -131,6 +132,43 @@
         <div class="mouse"></div>
       </div>
     </section>
+    <section id="freelancing" class="projects sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-bg">
+          <span class="heading-sec__main">Looking to work with me?</span>
+          <span class="heading-sec__sub">
+            I'm open to working for all sorts of projects! Not sure what you need? Contact me and I'll be more than happy to provide quotes, timeframes, and information.
+          </span>
+        </h2>
+
+        <div class="projects__content">
+          <div class="projects__row">
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title"><img src="https://img.icons8.com/ios-glyphs/30/null/voip-gateway.png" style="bottom: -1px;position: relative;width: 20px;">VOIP Phone Exchanges</h3>
+              <p class="projects__row-content-desc">
+                VOIP Phone Exchanges are the future. Don't let phone companies fool you; both small and large bussinesses <b>do not</b> need landline phones! I can help you set up a local or cloud voice exchange with your own toll-free number too! 
+              </p>
+              <button class="btn btn--med btn--theme dynamicBgClr" onclick="document.getElementById('voipstripe').style.display = 'inherit'">Check it out!</button>
+              </div>
+              
+            </div>
+          <div class="projects__row">
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title"><img src="https://img.icons8.com/ios-glyphs/30/null/voip-gateway.png" style="bottom: -1px;position: relative;width: 20px;">Webhook Processing/Automation</h3>
+              <p class="projects__row-content-desc">
+                VOIP Phone Exchanges are the future. Don't let phone companies fool you; both small and large bussinesses <b>do not</b> need landline phones! I can help you set up a local or cloud voice exchange with your own toll-free number too! 
+              </p>
+              <a
+                
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >Check it out!</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="about" class="about sec-pad">
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-med">
@@ -157,7 +195,7 @@
                 Feel free to contact me using the button below.
               </p>
             </div>
-            <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr"
+            <a href="#contact" class="btn btn--med btn--theme dynamicBgClr"
               >Contact</a
             >
           </div>
@@ -430,6 +468,9 @@
             </div>
         </div>
       </div>
+    <div id="voipstripe" class="popup">
+      <stripe-pricing-table pricing-table-id="prctbl_1MWPyxLcC6CnftayH7zWsXGw" publishable-key="pk_live_51L31eNLcC6Cnftayecvm7TL8aiF00lKZmB6SYCSstYQ22r0vBGn7aZrYgcNtYKvIrt0lGnH29H0lZDFvpilePHSH0067qcbjss"></stripe-pricing-table>
+    </div>
     </footer>
 
     <script src="./index.js"></script>
@@ -491,6 +532,14 @@
     <script>NextDNS()</script>
     <script>
       getContributions('rhijjawi')
+    </script>
+    <script>
+      document.addEventListener('click', (e)=>{
+        for (i of document.getElementsByClassName('popup')){
+        if (i.style.display != 'none' && e.srcElement.localName != 'button'){
+          i.style.display = 'none'
+        }}
+    });
     </script>
     <script data-collect-dnt="true" async defer src="https://sa.ramzihijjawi.me/latest.js"></script>
     <noscript><img data-collect-dnt="true" src="https://sa.ramzihijjawi.me/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>

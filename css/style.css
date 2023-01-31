@@ -19,7 +19,7 @@ Inside media queries 1em is always 16px i.e 1em = 16px at every screen size only
   padding: 0;
   box-sizing: inherit;
   font-family: inherit; }
-
+  
 html {
   font-size: 62.5%;
   scroll-behavior: smooth; }
@@ -32,7 +32,17 @@ html {
   @media only screen and (min-width: 112.5em) {
     html {
       font-size: 65%; } }
-
+.popup {
+  width: 80%;
+  height: fit-content;
+  position: fixed;
+  top: 35%;
+  left: 25%;
+  margin: -10% 0 0 -10%;
+  overflow: hidden;
+  display: none;
+  border-radius: 20px;
+}
 body {
   box-sizing: border-box;
   position: relative;
