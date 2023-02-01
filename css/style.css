@@ -37,7 +37,6 @@ html {
   width: 100%;
   position: absolute;
   overflow: hidden;
-  display: none;
   border-radius: 20px;
 }
 .popupcontainer {
