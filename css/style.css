@@ -33,15 +33,21 @@ html {
     html {
       font-size: 65%; } }
 .popup {
-  width: 80%;
   height: fit-content;
-  position: fixed;
-  top: 35%;
-  left: 25%;
-  margin: -10% 0 0 -10%;
+  width: 100%;
+  position: absolute;
   overflow: hidden;
   display: none;
   border-radius: 20px;
+}
+.popupcontainer {
+  position: fixed;
+  width: 70%;
+  text-align: center;
+  top: 20%;
+  left: 50%;
+  padding: 20px;
+  transform: translate(-50%, 0);
 }
 body {
   box-sizing: border-box;
