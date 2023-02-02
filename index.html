@@ -524,8 +524,8 @@
     <script>
       document.addEventListener('click', (e)=>{
         for (i of document.getElementsByClassName('popupcontainer')){
-        if (i.style.hidden != true && e.srcElement.localName != 'button'){
-          i.style.hidden = true
+        if (i.hidden != true && e.srcElement.localName != 'button'){
+          i.hidden = true
         }}
     });
     </script>
