@@ -523,9 +523,9 @@
     </script>
     <script>
       document.addEventListener('click', (e)=>{
-        for (i of document.getElementsByClassName('popup')){
-        if (i.style.display != 'none' && e.srcElement.localName != 'button'){
-          i.style.display = 'none'
+        for (i of document.getElementsByClassName('popupcontainer')){
+        if (i.style.hidden != true && e.srcElement.localName != 'button'){
+          i.style.hidden = true
         }}
     });
     </script>
