@@ -33,7 +33,7 @@ html {
     html {
       font-size: 65%; } }
 .popup {
-  height: fit-content;
+  height: 95%;
   width: 100%;
   position: absolute;
   overflow: hidden;
@@ -46,8 +46,10 @@ html {
   top: 20%;
   left: 50%;
   padding: 20px;
-  height: 100%;
-  transform: translate(-50%, 0);
+  height: 85%;
+  overflow: hidden;
+  border-radius: 20px;
+  transform: translate(-50%, -10%);
 }
 body {
   box-sizing: border-box;
