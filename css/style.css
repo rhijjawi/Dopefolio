@@ -48,7 +48,6 @@ html {
   padding: 20px;
   height: 100%;
   transform: translate(-50%, 0);
-  display: none;
 }
 body {
   box-sizing: border-box;
