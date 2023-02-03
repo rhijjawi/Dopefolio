@@ -521,9 +521,9 @@
     </script>
     <script>
       document.addEventListener('click', (e)=>{
-        document.body.style.overflow = '';
         for (i of document.getElementsByClassName('popupcontainer')){
         if (i.hidden != true && e.srcElement.localName != 'button'){
+          document.body.style.overflow = '';
           i.hidden = true
         }}
     });
