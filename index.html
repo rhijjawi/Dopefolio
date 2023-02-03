@@ -148,7 +148,7 @@
               <p class="projects__row-content-desc">
                 I'll set-up a VOIP Phone exchange for your company. I'll do all the set-up for you, and make sure everything works to your expectations before delivering the project.<br>VOIP Phone Exchanges are the future. Don't let phone companies fool you; both small and large bussinesses <b>do not</b> need landline phones! I can help you set up a local or cloud voice exchange with your own toll-free number too! 
               </p>
-              <button class="btn btn--med btn--theme dynamicBgClr" onclick="for (i of document.getElementsByClassName('popupcontainer')){i.hidden = true}; document.getElementById('voipstripecontainer').hidden = false">Check it out!</button>
+              <button class="btn btn--med btn--theme dynamicBgClr" onclick="for (i of document.getElementsByClassName('popupcontainer')){i.hidden = true}; document.getElementById('voipstripecontainer').hidden = false; document.body.style.overflow = 'hidden'">Check it out!</button>
               </div>
               
             </div>
@@ -158,7 +158,7 @@
               <p class="projects__row-content-desc">
                 Webhooks encourage interconnected-ness between apps (automation!). I use Webhooks to interface with APIs across different tools.
               </p>
-              <button class="btn btn--med btn--theme dynamicBgClr" onclick="for (i of document.getElementsByClassName('popupcontainer')){i.hidden = true}; document.getElementById('webhookstripecontainer').hidden = false;">Check it out!</button>
+              <button class="btn btn--med btn--theme dynamicBgClr" onclick="for (i of document.getElementsByClassName('popupcontainer')){i.hidden = true}; document.getElementById('webhookstripecontainer').hidden = false; document.body.style.overflow = 'hidden'">Check it out!</button>
             </div>
           </div>
         </div>
@@ -521,6 +521,7 @@
     </script>
     <script>
       document.addEventListener('click', (e)=>{
+        document.body.style.overflow = '';
         for (i of document.getElementsByClassName('popupcontainer')){
         if (i.hidden != true && e.srcElement.localName != 'button'){
           i.hidden = true
