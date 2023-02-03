@@ -36,7 +36,7 @@ html {
   height: 100%;
   width: 100%;
   position: absolute;
-  overflow: hidden;
+  overflow-y: scroll;
   border-radius: 20px;
 }
 .popupcontainer {
@@ -46,7 +46,6 @@ html {
   top: 20%;
   left: 50%;
   height: 75%;
-  overflow: hidden;
   border-radius: 20px;
   transform: translate(-50%, -10%);
 }
